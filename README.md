@@ -1,4 +1,15 @@
-# FNC Play Test - Fight Night Champion on PC
+<p align="center">
+  <img src="assets/fnc-logo.png" alt="FNC Play Test" width="160">
+</p>
+
+<h1 align="center">FNC Play Test - Fight Night Champion on PC</h1>
+
+<p align="center">
+  <a href="https://discord.gg/dZ7q48byC"><img src="https://img.shields.io/badge/Join%20our%20Discord-get%20the%20build%20%26%20play%20online-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join our Discord"></a>
+</p>
+
+<p align="center"><b>The play test, help and the online community are on our Discord:
+<a href="https://discord.gg/dZ7q48byC">discord.gg/dZ7q48byC</a></b></p>
 
 A community play test that runs **Fight Night Champion** natively on Windows PCs - with new fight rules, PC display
 and camera options, modding tools, and **online fights brought back on our own server**. You play from **your own
@@ -23,6 +34,7 @@ copy of the game**: the setup reads your Xbox 360 disc image once and builds the
 - [What you need](#what-you-need)
 - [Installing](#installing)
 - [Reporting a problem](#reporting-a-problem)
+- [Join the community](#join-the-community)
 - [Versions](#versions)
 - [Coming up](#coming-up)
 
@@ -129,6 +141,11 @@ settings, FNC ID and record stay, and the .iso is not needed again.
 
 Tell us in **[our Discord](https://discord.gg/dZ7q48byC)** what happened and when, and attach `game\fnc-run.log` from the game
 folder (older runs are in `game\logs\`). Please include the version shown on the title screen.
+
+## Join the community
+
+**[Join our Discord](https://discord.gg/dZ7q48byC)** - get the play test, find opponents, report bugs, and hear about
+new versions first.
 
 ## Versions
 
