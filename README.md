@@ -5,7 +5,7 @@ and camera options, modding tools, and **online fights brought back on our own s
 copy of the game**: the setup reads your Xbox 360 disc image once and builds the PC version from it.
 
 > **Getting the build:** the play test is shared person to person inside our community - ask in
-> **[your Discord / community link]**. This page has no downloads and no game files.
+> **[our Discord](https://discord.gg/dZ7q48byC)**. This page has no downloads and no game files.
 
 ![Online lobby: two players by FNC ID, the invite notice and the host's fight rules](screenshots/01-online-lobby.png)
 
@@ -127,7 +127,7 @@ settings, FNC ID and record stay, and the .iso is not needed again.
 
 ## Reporting a problem
 
-Tell us in **[your Discord / community link]** what happened and when, and attach `game\fnc-run.log` from the game
+Tell us in **[our Discord](https://discord.gg/dZ7q48byC)** what happened and when, and attach `game\fnc-run.log` from the game
 folder (older runs are in `game\logs\`). Please include the version shown on the title screen.
 
 ## Versions
