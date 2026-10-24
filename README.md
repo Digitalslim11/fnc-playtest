@@ -20,7 +20,7 @@ copy of the game**: the setup reads your Xbox 360 disc image once and builds the
 
 ![Online lobby: two players by FNC ID, the invite notice and the host's fight rules](screenshots/01-online-lobby.png)
 
-**Current version: v0.3**
+**Current version: v0.3.1**
 
 ---
 
@@ -132,8 +132,10 @@ Once you have the play test zip:
 5. Start the game with the **Fight Night Champion** shortcut on your desktop. When Windows asks about the firewall,
    click **Allow** (private networks) - that's only for players on your home network.
 
-**Updating:** run the newer setup and keep the same folder. Only the program files are replaced - your saves,
-settings, FNC ID and record stay, and the .iso is not needed again.
+**Updating:** close the game, unzip the new version **into your game folder** (the one with
+`Fight Night Champion.exe`) and run **FNC Play Test Setup.exe** from there - it offers **Update** for that folder.
+Only the program files are replaced - your saves, settings, FNC ID and record stay, and the .iso is not needed again.
+Online you can only fight players on the same version.
 
 **Removing:** delete the game folder and the desktop shortcut.
 
@@ -148,6 +150,12 @@ folder (older runs are in `game\logs\`). Please include the version shown on the
 new versions first.
 
 ## Versions
+
+**v0.3.1** - fixes from the first two-PC online test
+- Searching for another fight after an online fight works again (the next match used to fail to connect).
+- First person online: the player who joined a match saw their opponent without a head - fixed.
+- Online fighter select lists only licensed boxers (Champion Mode story characters are offline only).
+- Online play needs everyone on v0.3.1 - update before fighting.
 
 **v0.3**
 - Fight rules: bare knuckle (with wrap colours), old school rules, amateur bouts, realism presets.
@@ -165,6 +173,8 @@ new versions first.
 
 - A one-key bug report that collects the logs for you
 - Connection quality in the lobby (ping, direct or relay) and a lag warning in fights
+- Clearer fight-rules display, with a notice when the host's rules change yours
+- Match reports (fight and connection stats) to help us fix online problems
 - Rematch after an online fight
 - Friends list by FNC ID and a community leaderboard
 - Created fighters online
