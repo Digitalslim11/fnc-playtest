@@ -20,12 +20,13 @@ copy of the game**: the setup reads your Xbox 360 disc image once and builds the
 
 ![Online lobby: two players by FNC ID, the invite notice and the host's fight rules](screenshots/01-online-lobby.png)
 
-**Current version: v0.3.2**
+**Current version: v0.4**
 
 ---
 
 ## Contents
 
+- [Start screen and keyboard](#start-screen-and-keyboard)
 - [Online play](#online-play)
 - [Fight rules](#fight-rules)
 - [Display and camera](#display-and-camera)
@@ -41,6 +42,27 @@ copy of the game**: the setup reads your Xbox 360 disc image once and builds the
 
 ---
 
+## Start screen and keyboard
+
+New in v0.4: the desktop shortcut opens a start screen before the game.
+
+![The start screen](screenshots/10-launcher.png)
+
+- **Graphics: Normal or Potato PC.** Potato PC is for weaker PCs - 30 fps, no anti-aliasing, a smaller texture
+  budget and lighter filtering. Only the picture gets lighter: the fight itself runs exactly the same, online too.
+- **Controls: Xbox controller or Keyboard.** "Set up keys..." shows the layout - click a control, press its key.
+  A controller still works alongside the keyboard.
+- **Skip the start-up movies**, and the option to go straight into the game next time (hold Shift to see the screen
+  again).
+- **Online server status**, so you know before starting whether online play is available.
+
+**Keyboard play** works everywhere - menus, fights and online - and **the game's button prompts show your keys**:
+
+![The Controls screen with keyboard play: the punches show F, Backspace, Enter and R, clinch shows Q + E](screenshots/11-keyboard-controls.png)
+
+Default keys: WASD move, IJKL (+ U / O) punch, Space block, Left Shift power modifier, Q / E for LB / RB,
+Enter = A, Backspace = B, R = X, F = Y, Esc = Start, Tab = Back, arrow keys = D-pad.
+
 ## Online play
 
 Main menu -> **ONLINE** -> **FIGHT NOW** -> **HEAD-TO-HEAD**
@@ -55,12 +77,16 @@ Main menu -> **ONLINE** -> **FIGHT NOW** -> **HEAD-TO-HEAD**
   is carried through the FNCNet relay. Nobody sees your address.
 - **FNC ID and record:** every player gets an FNC ID on the first start, plus an online record - wins, losses and
   KOs. Leaving a fight early counts as a loss and the opponent gets the win.
-- **The host's fight rules apply to both players**, so both PCs always run exactly the same fight. A line at the
-  bottom of the screen shows which rules this fight uses.
+- **The host's fight rules apply to both players**, so both PCs always run exactly the same fight. A **rules card**
+  at the top of the screen shows them when the fight is set up; any rule that differs from your own settings is
+  marked in orange ("RULES CHANGED").
+- **Connection badge:** your ping to the opponent as coloured bars (green / yellow / orange / red) in the corner; it
+  warns you when the connection turns unstable.
+- **Created fighters online** (v0.4): the host decides with the CREATED FIGHTERS rule - see below.
 - **Fair fights:** both PCs check every second that they are showing the same fight; a fight that splits apart counts
   as no contest instead of a win or loss.
 - **Voice chat** in fights - hold D-pad Up or Down to talk.
-- Online: licensed boxers in the same weight class (created boxers work offline), no fouls.
+- Online: boxers in the same weight class, no fouls. Fighter packs are offline only for now.
 
 ## Fight rules
 
@@ -75,6 +101,9 @@ Settings -> **FIGHT RULES** - for Play Now and online (online, the host's choice
 | **Old school rules** | No round timer, no referee counts, no three-knockdown rule: a fight ends when a boxer can't get up. |
 | **Amateur** | An amateur bout - headgear, amateur scoring and red / blue amateur outfits. |
 | **Realism** | Stock, Realistic or Sim stamina and damage. |
+| **Created fighters** | Created boxers in online fights you host: **Off** (licensed boxers only), **Balanced** (the default - a created boxer is trimmed to the licensed roster's level: no boosts, top attributes capped) or **Open** (as made). |
+
+![The CREATED FIGHTERS rule; with keyboard play the prompts show the keys](screenshots/12-created-fighters-rule.png)
 
 ![Amateur bout online, bare knuckle and Sim realism](screenshots/02-amateur-online-fight.png)
 
@@ -121,9 +150,8 @@ Everything lives in the `mods` folder next to the game; with it untouched the ga
 
 ## Not in this play test yet
 
-Party invites, gyms, World Championship, the store and downloadable content (DLC), created boxers and fighter packs
-online. These are
-closed off in the menus with a clear message instead of a dead end.
+Party invites, gyms, World Championship, the store and downloadable content (DLC), and fighter packs online. These
+are closed off in the menus with a clear message instead of a dead end.
 
 ![The store, closed for the play test](screenshots/09-store-closed.png)
 
@@ -133,7 +161,7 @@ closed off in the menus with a clear message instead of a dead end.
 - Windows 10 or 11 (64-bit) and a DirectX 12 graphics card (NVIDIA GTX 600 series, AMD Radeon HD 7000,
   Intel HD 500 or newer).
 - About 6.5 GB of free disk space.
-- An Xbox controller.
+- An Xbox controller, or the keyboard.
 
 ## Installing
 
@@ -145,8 +173,9 @@ Once you have the play test zip:
    (the play test is not signed).
 4. Click **Install here**, then **Use this disc image**. The setup checks your disc image and unpacks it - a few
    minutes, once. The .iso is only read, never changed.
-5. Start the game with the **Fight Night Champion** shortcut on your desktop. When Windows asks about the firewall,
-   click **Allow** (private networks) - that's only for players on your home network.
+5. Start the game with the **Fight Night Champion** shortcut on your desktop: the start screen opens - pick your
+   options and press **PLAY**. When Windows asks about the firewall, click **Allow** (private networks) - that's only
+   for players on your home network.
 
 **Updating:** close the game, unzip the new version **into your game folder** (the one with
 `Fight Night Champion.exe`) and run **FNC Play Test Setup.exe** from there - it offers **Update** for that folder.
@@ -158,8 +187,13 @@ players on the same version.
 
 ## Reporting a problem
 
-Tell us in **[our Discord](https://discord.gg/bnEhZwypW2)** what happened and when, and attach `game\fnc-run.log` from the game
-folder (older runs are in `game\logs\`). Please include the version shown on the title screen.
+Press **F12** in the game right after something goes wrong: a bug report goes straight to us. Then tell us in
+**[our Discord](https://discord.gg/bnEhZwypW2)** what happened - you can attach `game\fnc-run.log` from the game folder
+too (older runs are in `game\logs\`).
+
+Reports: to find problems, the game also sends a short report after each online fight (ping, packet loss, frame
+rate, how it ended - with more detail only when something went wrong) and after a crash. They carry your FNC ID and
+game numbers, nothing else about you; untick "Send match and crash reports" on the start screen to turn them off.
 
 ## Join the community
 
@@ -167,6 +201,15 @@ folder (older runs are in `game\logs\`). Please include the version shown on the
 new versions first.
 
 ## Versions
+
+**v0.4** - start screen, keyboard play, created fighters online
+- Start screen before the game: Normal or Potato PC graphics, controller or keyboard, skip the start-up movies.
+- Keyboard play with your own keys, and button prompts that show them.
+- Created fighters online, with the host's CREATED FIGHTERS rule (Off / Balanced / Open).
+- Connection badge and the rules card in online fights.
+- F12 bug reports, plus match and crash reports to help fix online problems.
+- Instant replays fixed; a hint when the players online are on another version; graphics and network tuning.
+- Online play needs everyone on v0.4 - update before fighting.
 
 **v0.3.2** - fighter packs
 - Fighter packs: drop a fighter's folder into `game\fighters\` and he is in the game with his own head and skin.
@@ -193,14 +236,12 @@ new versions first.
 
 ## Coming up
 
-- Instant replays and highlights restored, and an option to skip the start-up movies
-- A one-key bug report that collects the logs for you
-- Connection quality in the lobby (ping, direct or relay) and a lag warning in fights
-- Clearer fight-rules display, with a notice when the host's rules change yours
-- Match reports (fight and connection stats) to help us fix online problems
+- Fixes from the match and crash reports
+- Discord: a live fight-results feed and who's online, then "Playing FNC" status with a Join button
+- Fighter packs online
+- More fighters
 - Rematch after an online fight
-- Friends list by FNC ID and a community leaderboard
-- Created fighters and fighter packs online
+- Leaderboards and seasons, then tournaments
 
 ---
 
