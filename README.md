@@ -20,7 +20,7 @@ copy of the game**: the setup reads your Xbox 360 disc image once and builds the
 
 ![Online lobby: two players by FNC ID, the invite notice and the host's fight rules](screenshots/01-online-lobby.png)
 
-**Current version: v0.3.1**
+**Current version: v0.3.2**
 
 ---
 
@@ -29,6 +29,7 @@ copy of the game**: the setup reads your Xbox 360 disc image once and builds the
 - [Online play](#online-play)
 - [Fight rules](#fight-rules)
 - [Display and camera](#display-and-camera)
+- [Fighter packs](#fighter-packs)
 - [Modding and the fight inspector](#modding-and-the-fight-inspector)
 - [Not in this play test yet](#not-in-this-play-test-yet)
 - [What you need](#what-you-need)
@@ -93,6 +94,20 @@ Settings -> **CAMERA**:
 
 ![Controls](screenshots/07-controls.png)
 
+## Fighter packs
+
+New in v0.3.2: extra fighters you add by dropping a folder into the game.
+
+- Put a fighter's folder into `game\fighters\` (for example `game\fighters\Floyd Mayweather\`) and start the game.
+  He appears with your created fighters - BOXER SHARE -> EDIT BOXER -> CREATED, and in fighter select - with his own
+  head shape and skin, plus the body, hair, kit, ratings and fighting style he was made with.
+- Delete the folder and he is gone the next time you start the game.
+- A broken or unknown folder is simply left out; `game\fighters\fighters-log.txt` says what was added and why
+  anything was skipped.
+- Fighters are made from a 3D head (for example from an AI 3D generator), fitted onto the game's own head so the
+  game's animation, eyes and damage all work, and polished in Blender. Fighter folders are shared in our Discord.
+- Offline only for now - online fighter lists leave them out.
+
 ## Modding and the fight inspector
 
 Everything lives in the `mods` folder next to the game; with it untouched the game plays exactly as shipped.
@@ -106,7 +121,8 @@ Everything lives in the `mods` folder next to the game; with it untouched the ga
 
 ## Not in this play test yet
 
-Party invites, gyms, World Championship, the store and downloadable content (DLC), created boxers online. These are
+Party invites, gyms, World Championship, the store and downloadable content (DLC), created boxers and fighter packs
+online. These are
 closed off in the menus with a clear message instead of a dead end.
 
 ![The store, closed for the play test](screenshots/09-store-closed.png)
@@ -134,8 +150,9 @@ Once you have the play test zip:
 
 **Updating:** close the game, unzip the new version **into your game folder** (the one with
 `Fight Night Champion.exe`) and run **FNC Play Test Setup.exe** from there - it offers **Update** for that folder.
-Only the program files are replaced - your saves, settings, FNC ID and record stay, and the .iso is not needed again.
-Online you can only fight players on the same version.
+Only the program files are replaced - your saves, settings, FNC ID, record and fighter packs stay, and the .iso is not
+needed again. Any older version updates straight to the newest one with the same download. Online you can only fight
+players on the same version.
 
 **Removing:** delete the game folder and the desktop shortcut.
 
@@ -150,6 +167,11 @@ folder (older runs are in `game\logs\`). Please include the version shown on the
 new versions first.
 
 ## Versions
+
+**v0.3.2** - fighter packs
+- Fighter packs: drop a fighter's folder into `game\fighters\` and he is in the game with his own head and skin.
+- One update takes any older install (even v0.1) straight to the newest version.
+- Online play needs everyone on v0.3.2 - update before fighting.
 
 **v0.3.1** - fixes from the first two-PC online test
 - Searching for another fight after an online fight works again (the next match used to fail to connect).
@@ -171,13 +193,14 @@ new versions first.
 
 ## Coming up
 
+- Instant replays and highlights restored, and an option to skip the start-up movies
 - A one-key bug report that collects the logs for you
 - Connection quality in the lobby (ping, direct or relay) and a lag warning in fights
 - Clearer fight-rules display, with a notice when the host's rules change yours
 - Match reports (fight and connection stats) to help us fix online problems
 - Rematch after an online fight
 - Friends list by FNC ID and a community leaderboard
-- Created fighters online
+- Created fighters and fighter packs online
 
 ---
 
